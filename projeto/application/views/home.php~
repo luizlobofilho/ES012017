@@ -74,7 +74,7 @@
 					<h3 class="panel-title">Já tenho cadastro</h3>
 				</div>
 				<div class="panel-body">
-					<?php echo form_open( 'login/logar',array( 'id'=>'formLogin','name'=>'formLogin','onsubmit'=>'return validaLogin()')); ?>
+					<?php echo form_open( 'home/logar',array( 'id'=>'formLogin','name'=>'formLogin','onsubmit'=>'return validaLogin()')); ?>
 
 						<div class="form-group">
 							<?php echo form_label( 'CPF ', 'nucpf',array( 'class'=>'required')); ?>
@@ -110,7 +110,7 @@
 
 					<div class="form-group">
 						<a class="btn btn-info pull-left" href="tutorial" target="_blank">Ajuda</a>
-						<?php echo form_input(array('id'=>'submitCadastro','type'=>'button','value'=> 'Cadastre-se','class'=>'btn btn-primary pull-right','onclick'=>"location.href='".base_url('index.php/pessoa/formCadastro')."'"));?>
+						<?php echo form_input(array('id'=>'submitCadastro','type'=>'button','value'=> 'Cadastre-se','class'=>'btn btn-primary pull-right','onclick'=>"location.href='".base_url('index.php/Cadastro')."'"));?>
 					</div>
 				</div>
 			</div>

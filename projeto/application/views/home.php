@@ -110,7 +110,7 @@
 
 					<div class="form-group">
 						<a class="btn btn-info pull-left" href="tutorial" target="_blank">Ajuda</a>
-						<?php echo form_input(array('id'=>'submitCadastro','type'=>'button','value'=> 'Cadastre-se','class'=>'btn btn-primary pull-right','onclick'=>"location.href='".base_url('index.php/pessoa/formCadastro')."'"));?>
+						<?php echo form_input(array('id'=>'submitCadastro','type'=>'button','value'=> 'Cadastre-se','class'=>'btn btn-primary pull-right','onclick'=>"location.href='".base_url('index.php/Cadastro')."'"));?>
 					</div>
 				</div>
 			</div>
