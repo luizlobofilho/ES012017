@@ -71,7 +71,7 @@
 		<div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1">
 			<div class="panel panel-primary" style="height: 335px;">
 				<div class="panel-heading">
-					<h3 class="panel-title">Já tenho cadastro</h3>
+					<h3 class="panel-title">Já tenho cadastro!</h3>
 				</div>
 				<div class="panel-body">
 					<?php echo form_open( 'home/logar',array( 'id'=>'formLogin','name'=>'formLogin','onsubmit'=>'return validaLogin()')); ?>
