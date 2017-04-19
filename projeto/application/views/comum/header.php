@@ -3,7 +3,7 @@
 	<header>
 		<h3> UNB - REDE SOCIAL  </h3>
 	</header>
-
+	
     <link rel="icon" href="<?php echo base_url('favicon.ico'); ?>" type="image/gif">
 
     <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css')?>">
@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css'); ?>">
 
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/ensapp.css')?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/esprojeto.css')?>">
 
 
     <script src="<?php echo base_url('assets/js/jquery.js');?>" type="text/javascript"></script>
@@ -67,5 +67,5 @@
 
     <script type="text/javascript">
 	
-
+	
       

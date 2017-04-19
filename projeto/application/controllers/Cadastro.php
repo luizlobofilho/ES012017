@@ -10,11 +10,11 @@ class Cadastro extends CI_Controller {
 		// carrega o modelo com os dados do banco 
 		$this->load->model('cadastro_model');
 		// cria o objeto que recebe os dados da model 
-		$objModel = new cadastro_model();
-		$retorno = $objModel->getPessoas();
-		// carrega a view de cadastro 	
-		$this->load->view('cadastro', array('retorno' => $retorno ));
+		//$objModel = new cadastro_model();
 
+		//$retorno = $objModel->getPessoas();
+		// carrega a view de cadastro 	
+		$this->load->view('cadastro');
 		// carrega o footer da página, por enquanto sem nada 
 		$this->load->view('comum/footer');
 	}
