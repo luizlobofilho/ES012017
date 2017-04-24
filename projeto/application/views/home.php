@@ -1,69 +1,32 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 		// Máscaras
-		$("#nucpf").mask("999.999.999-99");
+		$("#nu_cpf").mask("999.999.999-99");
 	});
     function validaLogin(){
 		// Validações
 		$("#formLogin").validate({
 			rules: {
-				nucpf: {
+				nu_cpf: {
 					required: true,
 					cpf: true
 				},
-				dcsenha: {
+				senha: {
 					required: true
 				}
 			},
 			messages: {
-				nucpf: {
+				nu_cpf: {
 					required: 'Informe o CPF'
 				},
-				dcsenha: {
+				senha: {
 					required: 'Informe a Senha'
 				}
 			}
 		});
         return $("#formLogin").valid();
     }
-    function validaCodigo(){
-		$("#formValidar").validate({
-			rules: {
-				bloco1: {
-					required: true,
-                    minlength: 6,
-				},
-				bloco2: {
-					required: true,
-                    minlength: 6,
-				},
-				bloco3: {
-					required: true,
-                    minlength: 3,
-				},
-			},
-			messages: {
-				bloco1: {
-					required: 'Informe o código',
-                    minlength: 'Informe 6 digitos',
-				},
-				bloco2: {
-					required: 'Informe o código',
-                    minlength: 'Informe 6 digitos',
-				},
-				bloco3: {
-					required: 'Informe o código',
-                    minlength: 'Informe 3 digitos',
-				},
-			}
-		});
-        if ($("#formValidar").valid()) {
-            setTimeout('document.formValidar.reset()', 1000);
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 </script>
 <br />
 <article class="row" id="login">
@@ -74,7 +37,7 @@
 					<h3 class="panel-title">Já tenho cadastro</h3>
 				</div>
 				<div class="panel-body">
-					<?php echo form_open( '/logar/validandoLogin',array( 'id'=>'formLogin','name'=>'formLogin','onsubmit'=>'return validaLogin()')); ?>
+					<?php echo form_open( 'logar/validandoLogin',array( 'id'=>'formLogin','name'=>'formLogin','onsubmit'=>'return validaLogin()')); ?>
 
 						<div class="form-group">
 							<?php echo form_label( 'CPF ', 'nu_cpf',array( 'class'=>'required')); ?>
