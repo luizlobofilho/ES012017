@@ -1,3 +1,15 @@
+body img{
+
+    width:100%;
+/*
+          background-image: -moz-linear-gradient(#fff, #133e79);
+    background-image: -webkit-gradient(color-stop(#fff), color-stop(#133e79));
+    background-image: -webkit-linear-gradient(#fff, #133e79);
+    background-image: -o-linear-gradient(#fff, #133e79);
+    background-image: -ms-linear-gradient(#fff, #133e79);
+    background-image: linear-gradient(#fff, #133e79);
+   /* filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#fff, endColorstr=#fff, GradientType=1);*/
+}
 textarea {
     resize: none;
 }
@@ -7,7 +19,11 @@ header * {
     margin: 0px;
     padding: 0px;
 }
-
+header img{
+    margin-left: 200px;
+    padding: 0px;
+    width:300px;
+}
 header ul,
 ol {
     list-style: none outside none;
@@ -18,16 +34,16 @@ header li {
 }
 
 header {
-    background-color: #195128;
-    background-image: -moz-radial-gradient(center, ellipse cover, #17882c 1%, #00510f 100%);
-    background-image: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(1%, #17882c), color-stop(100%, #00510f));
-    background-image: -webkit-radial-gradient(center, ellipse cover, #17882c 1%, #00510f 100%);
-    background-image: -o-radial-gradient(center, ellipse cover, #17882c 1%, #00510f 100%);
+  /*  background-color: #fff;
+      background-image: -moz-radial-gradient(center, ellipse cover, #133e79 1%, #00510f 100%);
+    background-image: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(1%, #133e79), color-stop(100%, #00510f));
+    background-image: -webkit-radial-gradient(center, ellipse cover, #133e79 1%, #00510f 100%);
+    background-image: -o-radial-gradient(center, ellipse cover, #133e79 1%, #00510f 100%);
     background-image: -ms-radial-gradient(center, ellipse cover, #17882c 1%, #00510f 100%);
     background-image: radial-gradient(ellipse at center, #17882c 1%, #00510f 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#157b28, endColorstr=#00510f, GradientType=1);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#fff, endColorstr=#fff, GradientType=1);
     color: #fff;
-    padding: 7px 0 0;
+  padding: 7px 0 0;*/
 }
 
 header .accessibility-language-actions-container {
@@ -318,7 +334,7 @@ div.panel.combo-p > .panel-body {
     margin-bottom: 1em;
     margin-left: 1em;
 }
-/* FOOTER */
+/* FOOTER 
 
 footer {
     background: #00420c;
@@ -399,7 +415,7 @@ footer .footer-ferramenta {
 footer .footer-ferramenta p {
     font-size: .91em;
     line-height: 1em;
-}
+}*/
 /* alto contraste para acessibilidade */
 
 .contraste {
