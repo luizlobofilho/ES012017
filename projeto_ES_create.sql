@@ -4,7 +4,7 @@
 -- tables
 -- Table: forum
 CREATE TABLE forum (
-    idn_forum int NOT NULL,
+    idn_forum int NOT NULL AUTO_INCREMENT,
     dsc_forum varchar(250) NOT NULL,
     dsc_titulo_forum varchar(50) NOT NULL,
     CONSTRAINT forum_pk PRIMARY KEY (idn_forum)
@@ -12,7 +12,7 @@ CREATE TABLE forum (
 
 -- Table: mensagem
 CREATE TABLE mensagem (
-    idn_mensagem int NOT NULL,
+    idn_mensagem int NOT NULL AUTO_INCREMENT,
     pessoa_idn_pessoa int NOT NULL,
     dsc_mensagem varchar(300) NULL,
     forum_idn_forum int NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE mensagem (
 
 -- Table: pessoa
 CREATE TABLE pessoa (
-    idn_pessoa int NOT NULL,
+    idn_pessoa int NOT NULL AUTO_INCREMENT,
     dsc_nome varchar(50) NOT NULL,
     nu_cpf varchar(12) NOT NULL,
     dsc_email varchar(50) NOT NULL,
