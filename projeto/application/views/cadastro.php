@@ -49,7 +49,7 @@
 
 <article class="row" id="login">
     <div class="row">
-        <div class="col-lg-4 col-lg-offset-2 col-md-8 ">
+        <div class="col-lg-6 col-lg-offset-2 col-md-8 ">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Cadastre-se</h3>
@@ -84,6 +84,8 @@
                     </div>
 
                     <div class="form-group" style="padding-top: 20px;">
+                        <button id="retornar" onclick="window.location.href='home'" type="button" class="btn btn-default">Voltar</button>
+
                         <?php echo form_input(array( 'id'=>'submit','type'=>'submit','value'=> 'Cadastrar','class'=>'btn btn-primary pull-right'));?>
                     </div>
 

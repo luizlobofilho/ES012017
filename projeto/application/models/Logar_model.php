@@ -8,8 +8,6 @@ class Logar_model extends CI_Model {
         $cpf = str_replace('-','',$cpf);
         $cpf = str_replace('.','',$cpf);
 
-        print_r($cpf);
-        print_r($senha);
         $sql = "SELECT * FROM pessoa WHERE nu_cpf = '$cpf' AND senha = '$senha'";
         $query = $this->db->query($sql);
         if($query->result_array() != null ){
