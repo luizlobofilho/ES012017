@@ -7,6 +7,15 @@
         // Validações
         $("#formCadastro").validate({
             rules: {
+                dsc_nome: {
+                  required : true
+                },
+                nu_matricula: {
+                  required : true
+                },
+                dsc_email: {
+                  required : true
+                },
                 nu_cpf: {
                     required: true
                 },
@@ -15,6 +24,15 @@
                 }
             },
             messages: {
+                dsc_nome: {
+                    required: 'Informe seu nome'
+                },
+                nu_matricula:{
+                    required: 'Informe uma matrícula válida'
+                },
+                dsc_email:{
+                    required: 'Informe um email'
+                },
                 nu_cpf: {
                     required: 'Informe o CPF'
                 },

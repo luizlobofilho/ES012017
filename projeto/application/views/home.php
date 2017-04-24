@@ -9,7 +9,6 @@
 			rules: {
 				nu_cpf: {
 					required: true,
-					cpf: true
 				},
 				senha: {
 					required: true
