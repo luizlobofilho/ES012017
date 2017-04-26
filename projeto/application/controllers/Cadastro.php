@@ -9,34 +9,13 @@ class Cadastro extends CI_Controller {
 		$this->load->view('comum/header');
 		// carrega o modelo com os dados do banco 
 		$this->load->model('cadastro_model');
+		// cria o objeto que recebe os dados da model 
+		$objModel = new cadastro_model();
+		$retorno = $objModel->getPessoas();
 		// carrega a view de cadastro 	
-		$this->load->view('cadastro');
+		$this->load->view('cadastro', array('retorno' => $retorno ));
+
 		// carrega o footer da página, por enquanto sem nada 
 		$this->load->view('comum/footer');
 	}
-
-	public function realizaCadastro(){
-	    // recebe o valor do campo nome
-	    $nome = $this->input->post('dsc_nome');
-	    // recebe o valor do campo cpf
-	    $cpf = $this->input->post('nu_cpf');
-	    // recebe o valor do campo email
-	    $email = $this->input->post('dsc_email');
-	    // recebe o valor do campo senha
-	    $senha = $this->input->post('senha');
-	    // recebe o valor do campo matricula
-	    $matricula = $this->input->post('nu_matricula');
-
-	    $this->load->model('cadastro_model');
-
-        $objModel = new cadastro_model();
-        $cadastro = $objModel->cadastraPessoa($nome,$cpf,$email,$senha,$matricula);
-        if($cadastro == 0 ){
-            redirect(base_url());
-        }
-        else{
-            redirect('cadastro');
-        }
-    }
-
 }
