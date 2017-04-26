@@ -74,16 +74,16 @@
 					<h3 class="panel-title">Já tenho cadastro</h3>
 				</div>
 				<div class="panel-body">
-					<?php echo form_open( 'home/logar',array( 'id'=>'formLogin','name'=>'formLogin','onsubmit'=>'return validaLogin()')); ?>
+					<?php echo form_open( '/logar/validandoLogin',array( 'id'=>'formLogin','name'=>'formLogin','onsubmit'=>'return validaLogin()')); ?>
 
 						<div class="form-group">
-							<?php echo form_label( 'CPF ', 'nucpf',array( 'class'=>'required')); ?>
-							<?php echo form_input(array( 'id'=>'nucpf','name'=>'nucpf','class'=>'form-control','autofocus'=>'autofocus'),set_value('nucpf',(isset($nucpf)?$nucpf:'')));?>
+							<?php echo form_label( 'CPF ', 'nu_cpf',array( 'class'=>'required')); ?>
+							<?php echo form_input(array( 'id'=>'nu_cpf','name'=>'nu_cpf','class'=>'form-control','autofocus'=>'autofocus'),set_value('nucpf',(isset($nucpf)?$nucpf:'')));?>
 						</div>
 
 						<div class="form-group">
-							<?php echo form_label( 'Senha ', 'dcsenha',array( 'class'=>'required')); ?>
-							<?php echo form_input(array( 'id'=>'dcsenha','name'=>'dcsenha','type'=> 'password','class'=>'form-control'),set_value('dcsenha',(isset($dcsenha)?$dcsenha:'')));?>
+							<?php echo form_label( 'Senha ', 'senha',array( 'class'=>'required')); ?>
+							<?php echo form_input(array( 'id'=>'senha','name'=>'senha','type'=> 'password','class'=>'form-control'),set_value('dcsenha',(isset($dcsenha)?$dcsenha:'')));?>
 						</div>
 
 						<div class="form-group" style="padding-top: 20px;">

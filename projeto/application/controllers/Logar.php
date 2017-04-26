@@ -14,13 +14,16 @@ class Logar extends CI_Controller {
             $this->index($login);
         }
     }
-
-    public function index($dados)
-    {
+    public function __construct() {
+        parent::__construct();
+        $this->load->library("parser");
+    }
+    public function index($dados) {
         // carrega o cabeçalho da página, bootstrap, javascript e etc...
         $this->load->view('comum/header');
+        $this->load->view('comum/menuLogged');
         // carrega a view de cadastro
-        $this->load->view('inicio',array('data'=> $dados));
+        $this->load->view('inicio', array('data'=> $dados));
         // carrega o footer da página, por enquanto sem nada
         $this->load->view('comum/footer');
     }
