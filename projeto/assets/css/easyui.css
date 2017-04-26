@@ -439,7 +439,7 @@
   margin: 0 4px;
   width: 32px;
 }
-.l-btn {/*
+.l-btn {
   color: #444;
   background: #f5f5f5;
   background-repeat: repeat-x;
@@ -485,7 +485,7 @@
   background: linear-gradient(to bottom,#ffffff 0,#e6e6e6 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#e6e6e6,GradientType=0);
-}*/
+}
 .l-btn-disabled .l-btn-text,
 .l-btn-disabled .l-btn-icon {
   filter: alpha(opacity=50);
