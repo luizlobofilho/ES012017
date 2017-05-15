@@ -13,6 +13,12 @@
 							print_r($linha['dsc_nome']);
 						?>
 						</h3>
+						<h3>
+						<?php
+							print_r($this->session->userdata('cpf'));
+						?>
+
+						</h3>
 						</br></br></br>
 				</div>
         	</div>

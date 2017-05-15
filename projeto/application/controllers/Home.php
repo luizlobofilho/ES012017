@@ -7,13 +7,14 @@ class Home extends CI_Controller {
 	{
 		// carrega o cabeçalho da página, bootstrap, javascript e etc...
 		$this->load->view('comum/header');
-        $this->load->view('comum/menuIni');
+          $this->load->view('comum/menuIni');
 		// carrega o modelo com os dados do banco 
 		$this->load->model('home_model');
 		// cria o objeto que recebe os dados da model 
 		$objModel = new home_model();
 		// recebe o retorno do método da model 
-		$retorno = $objModel->getPessoas();	
+		$retorno = $objModel->getPessoas();
+		
 
 	//	print_r($retorno);
 
