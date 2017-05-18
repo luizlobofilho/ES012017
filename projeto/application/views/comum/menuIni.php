@@ -1,12 +1,15 @@
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Máscaras
+        $("#nu_cpf").mask("999.999.999-99");
+    });
+    </script>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
 
         <ul class="nav navbar-nav">
             <li class="active"><a href=# >Inicio</a></li>
-            <li>
-                <a class="page-scroll" href="#sobre">Sobre</a>
-            </li>
+            <li><a class="page-scroll" href="#sobre">Sobre</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">

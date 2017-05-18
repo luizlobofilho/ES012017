@@ -51,7 +51,7 @@
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 col-lg-6 col-lg-offset-3">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Cadastre-se</h3>
+                    <p1 class="panel-title">Cadastre-se</p1>
                 </div>
                 <div class="panel-body">
                     <?php echo form_open( '/cadastro/realizaCadastro',array( 'id'=>'formCadastro','name'=>'formCadastro','onsubmit'=>'return validaLogin()')); ?>

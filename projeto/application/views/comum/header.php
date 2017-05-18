@@ -68,6 +68,8 @@
 
 <script src="<?php echo base_url('assets/js/moment.min.js');?>" type="text/javascript"></script>
 
+<script src="<?php echo base_url('assets/js/script.js');?>" type="text/javascript"></script>
+
 <script type="text/javascript"></script>
 
 <body>
