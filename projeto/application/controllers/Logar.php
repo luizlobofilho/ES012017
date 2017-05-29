@@ -24,8 +24,8 @@ class Logar extends CI_Controller {
 
 	
 
-		if(!empty($this->session->userdata['login']))
-			$this->index($this->session->userdata['login']);
+		if(!empty($this->session->userdata['SESSAO']['login']))
+			$this->index($this->session->userdata['SESSAO']['login']);
 	
 
     }
