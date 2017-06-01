@@ -19,7 +19,7 @@ class Cadastro_model extends CI_Model {
                     'dsc_nome' => $nome,
                     'nu_cpf' => $cpf,
                     'dsc_email' => $email,
-                    'senha' => $senha,
+                    'senha' => md5($senha),
                     'nu_matricula' => $matricula
                 );
             // executa o insert na tabela pessoa
