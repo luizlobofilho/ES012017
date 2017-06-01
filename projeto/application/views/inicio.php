@@ -6,12 +6,17 @@
             	<div class="well"></br>
 						<h3>Seja Bem-Vind@!</h3>
 						</br>
-						<?php
+						<?php 
 						foreach ($data as $linha)
 							?>
 						<h3>
 						<?php
 							print_r($linha['dsc_nome']);
+						?>
+						</h3>
+						<h3>
+						<?php
+							print_r($this->session->userdata('cpf'));
 						?>
 						</h3>
 						</br></br></br>

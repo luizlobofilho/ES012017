@@ -19,6 +19,7 @@
                 <li><a href='../forum'>Forum</a></li><
                 <li><a href='/debates'>Debates</a></li>
                 <li><a href='/avaliacao'>Avaliações Docentes</a></li>
+			 <li><a href='../logar/logout'>Logout</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <form class="navbar-form">
