@@ -10,7 +10,7 @@ class Logar extends CI_Controller {
 	  
 		if(empty($this->input->post('senha')) && empty($this->session->userdata('cpf')))
 			$this->logout();
-
+		$objlogin = '';
 		//if(!empty($this->input->post('senha') || !empty($this->session->userdata('cpf')){
 		//	redirect(base_url(''));
 
@@ -20,17 +20,17 @@ class Logar extends CI_Controller {
 		
 			$this->load->model('Logar_model');
 			$objModel = new Logar_model();
-
 			$this->session->set_userdata('id',md5($cpf));
+			$this->session->set_userdata('logged',true);
 			$this->session->set_userdata('login', $objModel->validaLogin($cpf,$senha));
 			$this->session->set_userdata('cpf', $cpf);
 		}	
 
 		
-
+		#$this->logout();
 	
 
-		if(!empty($this->session->userdata('login')))
+		if($this->session->userdata('logged'))
 			$this->index($this->session->userdata('login'));
 	
 
@@ -41,6 +41,7 @@ class Logar extends CI_Controller {
 		$this->load->library('session');
 
 		$this->session->unset_userdata('login');
+		$this->session->unset_userdata('logged');
 		$this->session->unset_userdata('id');
 		$this->session->unset_userdata('cpf');
 		$this->session->sess_destroy();
@@ -49,7 +50,7 @@ class Logar extends CI_Controller {
 
 	
 	public function index($dados) {
-
+		$this->load->library('session');
 		// carrega o cabeçalho da página, bootstrap, javascript e etc...
 		$this->load->view('comum/header');
 		$this->load->view('comum/menuLogged');

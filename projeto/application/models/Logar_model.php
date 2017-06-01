@@ -17,8 +17,8 @@ class Logar_model extends CI_Model {
 		return $query->result_array();
 		  
         }else{
-		  
-            return 0;
+		redirect(base_url(''));
+          return 0;
         }
 
     }
