@@ -1,32 +1,10 @@
 <script type="text/javascript">
-    function validaForum(){
-        // Validações
-        $("#formForum").validate({
-            rules: {
-                inputTituloForum: {
-                    required : true
-                },
-                inputDscForum: {
-                    required : true
-                }
-            },
-            messages: {
-                inputTituloForum: {
-                    required: 'Informe o título do fórum'
-                },
-                inputDscForum:{
-                    required: 'Informe a descrição do fórum'
-                }
-            }
-        });
-        return $("#formForum").valid();
-    }
     $(document).ready(function() {
-        $('#open-modal-forum-button').on("click",function(e) {
-            $('#modalForum').modal('show');
+        $('#open-modal-mensagem-button').on("click",function(e) {
+            $('#modalMensagem').modal('show');
         });
         $("#btn-close").on("click", function(e){
-            $("#modalForum").modal('hide');
+            $("#modalMensagem").modal('hide');
         });
 
     });
@@ -35,10 +13,10 @@
 
 <article class="row" id="inicio">
 
-    <!--modal forum !-->
+    <!--modal mensagem !-->
     <div class="modal fade" id="modalForum">
         <?php
-        echo form_open('forum/cadastrarForum',array('id'=>'formForum','name'=>'formForum','role'=>'form', 'onsubmit'=>'return validaForum()') );
+        echo form_open('forum/cadastrarForum',array('id'=>'formMensagem','name'=>'formMensagem','role'=>'form') );
         ?>
         <div class="modal-content">
             <div class="modal-header">
@@ -61,21 +39,18 @@
         <?php echo form_close(); ?>
     </div>
 
+
+
     <div id="container-fluid">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-5 col-sm-offset-1">
                 <div class="well"></br>
-                    <button type="button" id="open-modal-forum-button" class="btn btn-default">Adicionar Fórum</button>
-                    <?php echo form_open( '/forum/selectForum',array( 'id'=>'forum','name'=>'forum')); ?>
-                    <h3>Fórum</h3>
+                    <button type="button" id="open-modal-mensagem-button" class="btn btn-default">Escrever</button>
+                    <h3>Mensagens</h3>
                     </br>
                     <?php
-                        //  print_r($dados);
-                        foreach ($dados as $linha){
-                            echo '<li><a href ="/projeto/index.php/mensagem?id='.$linha->idn_forum.'&forum='.$linha->dsc_titulo_forum.' " >'.$linha->dsc_titulo_forum.'</a></li>';
-                        }
-                        echo form_close();
-                    ?>
+                        print_r($mensagens);
+                     ?>
                     </br></br></br>
                 </div>
             </div>
