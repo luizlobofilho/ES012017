@@ -28,7 +28,6 @@
         $("#btn-close").on("click", function(e){
             $("#modalForum").modal('hide');
         });
-
     });
 
 </script>
@@ -69,13 +68,19 @@
                     <?php echo form_open( '/forum/selectForum',array( 'id'=>'forum','name'=>'forum')); ?>
                     <h3>Fórum</h3>
                     </br>
-                    <?php
-                        //  print_r($dados);
-                        foreach ($dados as $linha){
-                            echo '<li><a href ="/projeto/index.php/mensagem?id='.$linha->idn_forum.'&forum='.$linha->dsc_titulo_forum.' " >'.$linha->dsc_titulo_forum.'</a></li>';
-                        }
-                        echo form_close();
-                    ?>
+                        <table class="table">
+                            <?php
+                                //  print_r($dados);
+                                foreach ($dados as $linha){
+                                    echo '<tr><td><a href="/projeto/index.php/forum/deletarForum?id='.$linha->idn_forum.'"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                    </a></td>';
+                                    echo '<td><a href ="/projeto/index.php/forum"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                    </a></td>';;
+                                    echo '<td><a href ="/projeto/index.php/mensagem?id='.$linha->idn_forum.'&forum='.$linha->dsc_titulo_forum.' " >'.$linha->dsc_titulo_forum.'</a></td></tr>';
+                                }
+                                echo form_close();
+                            ?>
+                        </table>
                     </br></br></br>
                 </div>
             </div>
