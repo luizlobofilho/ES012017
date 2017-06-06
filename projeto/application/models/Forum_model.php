@@ -22,4 +22,10 @@ class Forum_model extends CI_Model {
         }
         return 0;
     }
+    public function deleteForum($idforum){
+        $array = array (
+            'idn_forum' => $idforum
+        );
+        $this->db->delete('forum',$array);
+    }
 }
