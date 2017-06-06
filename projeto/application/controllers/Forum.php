@@ -28,5 +28,14 @@ class Forum  extends CI_Controller {
             redirect('/forum');
         }
     }
+    public function deletarForum(){
+        $idforum = $this->input->get('id');
+        print_r($idforum);
+        $this->load->model('forum_model');
+        // cria o objeto que recebe os dados da model
+        $objModel = new forum_model();
+        $objModel->deleteForum($idforum);
+        redirect('/forum');
 
+    }
 }
