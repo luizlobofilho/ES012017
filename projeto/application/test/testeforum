@@ -17,15 +17,16 @@ class Testforum extends PHPUnit
 	}
 	public function realizaCadastro(){
 	    // recebe o valor do campo nome
-	    $nome = $this->assert->post('dsc_nome');
+	    $nome = $this->input->post('dsc_nome');
 	    // recebe o valor do campo cpf
-	    $cpf = $this->assert->post('nu_cpf');
+	    $cpf = $this->input->post('nu_cpf');
+	    $this->assertInternalType('int', $cpf->getnu_cpf());
 	    // recebe o valor do campo email
-	    $email = $this->assert->post('dsc_email');
+	    $email = $this->input->post('dsc_email');
 	    // recebe o valor do campo senha
-	    $senha = $this->assert->post('senha');
+	    $senha = $this->input->post('senha');
 	    // recebe o valor do campo matricula
-	    $matricula = $this->assert->post('nu_matricula');
+	    $matricula = $this->input->post('nu_matricula');
 	    $this->load->model('cadastro_model');
         $objModel = new cadastro_model();
         $cadastro = $objModel->cadastraPessoa($nome,$cpf,$email,$senha,$matricula);
