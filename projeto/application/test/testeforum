@@ -1,7 +1,7 @@
 use PHPUnit_Framework_TestCase as PHPUnit;
 use Application\NativeElements\Math;
 
-class Testforum extends forum
+class Testforum extends PHPUnit
 {
  
 	public function index()
