@@ -1,6 +1,28 @@
 Software: Rede social - UnB 
 Engenharia de Software - 01/2017
 
+Equipe UnbBook:
+
+Luiz
+Ana
+Lavoisier
+Abner
+Klark
 
 
-alteração readme
+
+Projeto desenvolvido com o framework - Codeigniter 3.x 
+
+Como rodar ? 
+
+Clone o repositório ES012017, retire(copie ou recorte) a pasta projeto e coloque em seu diretório web(localhost)
+
+Modifique o arquivo localizado em projeto/application/config/database.php para selecionar o tipo de banco que você 
+vai acessar utilizando a aplicação ( MySQL, Pgsql e etc ) fornencendo os dados: nome de usuário e senha 
+
+Em seu banco de dados local execute o SQL de criação da base de dados do projeto: projeto_ES_create.sql 
+
+Pronto !!!
+
+Agora basta acessar a URL de seu brownser em https://localhost/projeto e começar a navegar !!!
+
